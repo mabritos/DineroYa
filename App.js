@@ -24,10 +24,13 @@ export const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator headerMode="none" initialRouteName="HomeScreen">
+      <Stack.Navigator headerMode="none" initialRouteName="AcceptedScreen">
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="InstructionsScreen" component={InstructionsScreen} />
         <Stack.Screen name="PaycheckScreen" component={PaycheckScreen} />
+        <Stack.Screen name="NfcReaderScreen" component={NfcReaderScreen} />
+        <Stack.Screen name="ProcessingScreen" component={ProcessingScreen} />
+        <Stack.Screen name="AcceptedScreen" component={AcceptedScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

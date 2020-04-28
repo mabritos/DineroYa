@@ -1,23 +1,22 @@
 import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
-import MaterialSpinner2 from "../components/MaterialSpinner2";
-import Icon from "react-native-vector-icons/Entypo";
+import { StyleSheet, View, Text, ActivityIndicator } from "react-native";
 
 function ProcessingScreen(props) {
   return (
     <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.procesando}>Procesando</Text>
+      </View>
       <View style={styles.rect2}>
         <Text style={styles.loremIpsum}>
-          Su solicitud de préstamo está siendo procesada{"\n"}
-          {"\n"}Por favor aguarde unos segundos
+          Su solicitud de préstamo está siendo procesada
         </Text>
-        <MaterialSpinner2 style={styles.materialSpinner2}></MaterialSpinner2>
-      </View>
-      <View style={styles.rect3}>
-        <View style={styles.procesandoRow}>
-          <Text style={styles.procesando}>Procesando</Text>
-          <Icon name="cross" style={styles.icon1}></Icon>
+        <View style={styles.activityIndicator}>
+          <ActivityIndicator size="large" color="#0000ff"></ActivityIndicator>
         </View>
+        <Text style={styles.loremIpsum1}>
+          Por favor aguarde unos segundos
+        </Text>
       </View>
     </View>
   );
@@ -28,57 +27,49 @@ const styles = StyleSheet.create({
     flex: 1
   },
   rect2: {
-    top: 83,
-    left: 0,
-    height: 657,
+    flex: 9,
+    flexDirection: "column",
+    alignItems: "center",
     backgroundColor: "rgba(255,255,255,1)",
-    position: "absolute",
-    right: 0
   },
   loremIpsum: {
-    width: 292,
-    height: 131,
+    marginTop: "20%",
+    flex: 2,
+    width: "80%",
+    height: "auto",
     color: "#121212",
     fontSize: 24,
     fontFamily: "roboto-regular",
     lineHeight: 30,
     textAlign: "center",
-    marginTop: 121,
-    marginLeft: 35
+    
   },
-  materialSpinner2: {
-    width: 61,
-    height: 64,
-    marginTop: 101,
-    marginLeft: 153
+  loremIpsum1: {
+    flex: 2,
+    width: "80%",
+    height: "auto",
+    color: "#121212",
+    fontSize: 24,
+    fontFamily: "roboto-regular",
+    lineHeight: 30,
+    textAlign: "center",
+    
   },
-  rect3: {
-    width: 360,
-    height: 83,
+  activityIndicator: {
+    flex: 1
+  },
+  header: {
+    flex: 1,
     backgroundColor: "rgba(17,34,68,1)",
-    flexDirection: "row"
+    flexDirection: "column"
   },
   procesando: {
     color: "rgba(255,255,255,1)",
     fontSize: 24,
     fontFamily: "roboto-700",
-    lineHeight: 30,
-    marginLeft: 99
+    alignSelf: "center",
+    marginTop: "6%"
   },
-  icon1: {
-    color: "rgba(255,255,255,1)",
-    fontSize: 30,
-    flex: 0,
-    marginLeft: -228
-  },
-  procesandoRow: {
-    height: 30,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 115,
-    marginLeft: 17,
-    marginTop: 33
-  }
 });
 
 export default ProcessingScreen;
