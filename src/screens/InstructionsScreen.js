@@ -19,14 +19,12 @@ function InstructionsScreen(props) {
         ></MaterialButtonDark>
       </View>
       <View style={styles.rect3}>
-        <View style={styles.icon1Row}>
-          <Icon name="cross" style={styles.icon1}></Icon>
+      <Icon name="cross" style={styles.icon1}></Icon>
           <Image
             source={require("../assets/images/credihappy-prestamos3.png")}
             resizeMode="contain"
             style={styles.image1}
           ></Image>
-        </View>
       </View>
     </View>
   );
@@ -37,66 +35,57 @@ const styles = StyleSheet.create({
     flex: 1
   },
   rect2: {
-    top: 185,
-    left: 0,
-    height: 555,
+    top: "25%",
+    height: "75%",
     backgroundColor: "rgba(255,255,255,1)",
-    position: "absolute",
-    right: 0
+    position: "relative",
+    alignItems: "center"
   },
   soloUnosPasosMas1: {
-    width: 236,
-    height: 30,
+    textAlign: "center",
+    width: "80%",
+    height: "auto",
     color: "rgba(0,0,30,1)",
     fontSize: 24,
     fontFamily: "roboto-700",
     lineHeight: 30,
-    marginTop: 78,
-    marginLeft: 62
+    marginTop: "20%"
+   
   },
   loremIpsum1: {
-    width: 288,
-    height: 148,
+    width: "80%",
+    height: "auto",
     color: "rgba(0,0,30,1)",
     fontSize: 20,
     fontFamily: "roboto-regular",
     lineHeight: 30,
     textAlign: "center",
-    marginTop: 42,
-    marginLeft: 36
+    marginTop: "10%"
   },
   materialButtonDark2: {
-    width: 294,
+    width: "80%",
     height: 45,
     backgroundColor: "rgba(7,201,219,1)",
     borderRadius: 10,
-    marginTop: 77,
-    marginLeft: 33
+    marginTop: "20%"
   },
   rect3: {
-    width: 360,
-    height: 185,
+    width: "100%",
+    height: "25%",
     backgroundColor: "rgba(17,34,68,1)",
-    flexDirection: "row"
+    position: "absolute"
   },
   icon1: {
     color: "rgba(255,255,255,1)",
     fontSize: 30,
-    flex: 0
+    marginLeft: "10%",
+    marginTop: "10%"
   },
   image1: {
-    width: 200,
-    height: 200,
-    marginLeft: 33,
-    marginTop: 9
-  },
-  icon1Row: {
-    height: 209,
-    flexDirection: "row",
-    flex: 1,
-    marginRight: 80,
-    marginLeft: 17,
-    marginTop: 33
+    width: "100%",
+    height: "100%",
+    position: "absolute",
+    marginTop: "10%"
   }
 });
 

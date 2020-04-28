@@ -1,31 +1,28 @@
 import React, { Component } from "react";
 import { StyleSheet, View, Text, TextInput, Image } from "react-native";
-import { Center } from "@builderx/utils";
 import MaterialButtonDark from "../components/MaterialButtonDark";
 
 function HomeScreen(props) {
   return (
     <View style={styles.container}>
-      <Center horizontal>
-        <View style={styles.rect2}>
-          <Text style={styles.monto1}>Monto</Text>
-          <TextInput
-            placeholder="Ingrese el Monto en Pesos ($)"
-            style={styles.textInput1}
-          ></TextInput>
-          <Text style={styles.cantidadDeCuotas1}>Cantidad de Cuotas</Text>
-          <TextInput
-            placeholder="Ingrese la cantidad de Cuotas"
-            style={styles.textInput2}
-          ></TextInput>
-          <MaterialButtonDark
-            text1="Solicitar Préstamo"
-            button1="Untitled"
-            style={styles.materialButtonDark1}
-          ></MaterialButtonDark>
-          <Text style={styles.misPrestamos1}>Mis préstamos</Text>
-        </View>
-      </Center>
+      <View style={styles.rect2}>
+        <Text style={styles.monto1}>Monto</Text>
+        <TextInput
+          placeholder="Ingrese el Monto en Pesos ($)"
+          style={styles.textInput1}
+        ></TextInput>
+        <Text style={styles.cantidadDeCuotas1}>Cantidad de Cuotas</Text>
+        <TextInput
+          placeholder="Ingrese la cantidad de Cuotas"
+          style={styles.textInput2}
+        ></TextInput>
+        <MaterialButtonDark
+          text1="Solicitar Préstamo"
+          button1="Untitled"
+          style={styles.materialButtonDark1}
+        ></MaterialButtonDark>
+        <Text style={styles.misPrestamos1}>Mis préstamos</Text>
+      </View>
       <View style={styles.rect3}>
         <Image
           source={require("../assets/images/credihappy-prestamos3.png")}
@@ -42,26 +39,25 @@ const styles = StyleSheet.create({
     flex: 1
   },
   rect2: {
-    top: 185,
-    width: 360,
-    height: 555,
+    position: "relative",
+    top: "25%",
     backgroundColor: "rgba(255,255,255,1)",
-    position: "absolute"
+    height: "75%",
+    width: "100%"
   },
   monto1: {
-    width: 63,
-    height: 16,
-    flex: 0.03,
+    width: "auto",
+    height: "auto",
     color: "rgba(0,0,0,1)",
     fontSize: 20,
     fontFamily: "roboto-500",
-    marginTop: 103,
-    marginLeft: 30
+    marginTop: "20%",
+    marginLeft: "10%"
   },
   textInput1: {
-    width: 299,
-    height: 54,
-    flex: 0.03,
+    alignSelf: "center",
+    width: "80%",
+    height: 50,
     backgroundColor: "rgba(230, 230, 230,1)",
     color: "#121212",
     borderRadius: 10,
@@ -70,23 +66,20 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     fontFamily: "roboto-regular",
     textAlign: "center",
-    marginTop: 13,
-    marginLeft: 33
   },
   cantidadDeCuotas1: {
-    width: 188,
-    height: 16,
-    flex: 0.03,
+    width: "auto",
+    height: "auto",
     color: "rgba(0,0,0,1)",
     fontSize: 20,
     fontFamily: "roboto-500",
-    marginTop: 28,
-    marginLeft: 30
+    marginTop: "15%",
+    marginLeft: "10%"
   },
   textInput2: {
-    width: 299,
-    height: 57,
-    flex: 0.03,
+    alignSelf: "center",
+    width: "80%",
+    height: 50,
     backgroundColor: "rgba(230, 230, 230,1)",
     color: "#121212",
     borderRadius: 10,
@@ -95,40 +88,39 @@ const styles = StyleSheet.create({
     borderStyle: "solid",
     fontFamily: "roboto-regular",
     textAlign: "center",
-    marginTop: 19,
-    marginLeft: 33
   },
   materialButtonDark1: {
-    width: 294,
+    alignSelf: "center",
+    width: "80%",
+    marginTop: "15%",
     height: 45,
-    flex: 0.03,
     backgroundColor: "rgba(7,201,219,1)",
     borderRadius: 10,
-    marginTop: 52,
-    marginLeft: 33
+    
   },
   misPrestamos1: {
-    width: 106,
-    height: 16,
-    flex: 0.03,
+    alignSelf: "center",
+    width: "auto",
+    height: "auto",
     color: "rgba(0,0,30,1)",
-    opacity: 0.79,
+    opacity: 0.70,
     fontSize: 16,
     fontFamily: "roboto-regular",
     textDecorationLine: "underline",
-    marginTop: 45,
-    marginLeft: 127
+    marginTop: 49,
+    
   },
   rect3: {
-    height: 185,
+    height: "25%",
+    width: "100%",
+    position: "absolute",
     backgroundColor: "rgba(17,34,68,1)",
-    alignSelf: "stretch"
+    alignItems: "center"
   },
   image: {
-    width: 200,
-    height: 200,
-    marginTop: 42,
-    alignSelf: "center"
+    width: "100%",
+    height: "100%",
+    marginTop: "10%"
   }
 });
 
